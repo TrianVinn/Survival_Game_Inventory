@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://d0l130rme2m01"]
+
+[ext_resource type="Texture2D" uid="uid://c5jd7a11y3gqx" path="res://assets/structures/ruin_yellow.png" id="1_rxjre"]
+[ext_resource type="Script" uid="uid://b07bi2rhp14c0" path="res://scripts/house_1.gd" id="1_w5d2h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxjre"]
+size = Vector2(260, 239)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rxjre"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5d2h"]
+bg_color = Color(0.9059696, 0.43147105, 0.4487599, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_so4da"]
+bg_color = Color(0.8346167, 0.48272604, 0.51625973, 1)
+
+[node name="house_1" type="Node2D" unique_id=1840667032]
+z_index = -1
+script = ExtResource("1_w5d2h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1416626734]
+texture = ExtResource("1_rxjre")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=750079490]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2009466287]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_rxjre")
+
+[node name="enter" type="Button" parent="." unique_id=1485477214]
+visible = false
+offset_left = 134.0
+offset_top = -98.0
+offset_right = 328.0
+offset_bottom = -7.0
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_rxjre")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_w5d2h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_so4da")
+text = "ENTER"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="button_down" from="enter" to="." method="_on_enter_button_down"]

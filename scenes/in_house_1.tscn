@@ -1,0 +1,42 @@
+[gd_scene format=4 uid="uid://bmv0dtn8gyxp1"]
+
+[ext_resource type="Texture2D" uid="uid://dvhvqs3m23fr3" path="res://assets/structures/in_house/floor_house.jpg" id="1_csqd8"]
+[ext_resource type="Script" uid="uid://bwv55s1bkw20g" path="res://scenes/in_house_1.gd" id="1_kdsnk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdsnk"]
+texture = ExtResource("1_csqd8")
+0:0/size_in_atlas = Vector2i(17, 11)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_d8kl6"]
+tile_size = Vector2i(272, 176)
+sources/0 = SubResource("TileSetAtlasSource_kdsnk")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdsnk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d8kl6"]
+bg_color = Color(0.84041023, 0.4892016, 0.4390114, 1)
+
+[node name="in_house_1" type="Node2D" unique_id=634552007]
+script = ExtResource("1_kdsnk")
+
+[node name="floor" type="TileMapLayer" parent="." unique_id=1116214224]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAACAAMAAAAAAAAAAAABAAMAAAAAAAAAAAAAAAMAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_d8kl6")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1958122950]
+position = Vector2(718, 620)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=330938613]
+
+[node name="exit" type="Button" parent="CanvasLayer" unique_id=1971583321]
+offset_left = 1014.0
+offset_top = 106.0
+offset_right = 1116.0
+offset_bottom = 178.0
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_kdsnk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d8kl6")
+text = "EXIT"
+
+[connection signal="button_down" from="CanvasLayer/exit" to="." method="_on_exit_button_down"]

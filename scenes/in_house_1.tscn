@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dvhvqs3m23fr3" path="res://assets/structures/in_house/floor_house.jpg" id="1_csqd8"]
 [ext_resource type="Script" uid="uid://bwv55s1bkw20g" path="res://scenes/in_house_1.gd" id="1_kdsnk"]
+[ext_resource type="Script" uid="uid://clfk6gl32g5b6" path="res://scenes/chest.gd" id="3_vwkql"]
+[ext_resource type="Resource" uid="uid://buj4a4qma4l6s" path="res://inventory/items/wood.tres" id="4_mo1nb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdsnk"]
 texture = ExtResource("1_csqd8")
@@ -16,6 +18,9 @@ sources/0 = SubResource("TileSetAtlasSource_kdsnk")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d8kl6"]
 bg_color = Color(0.84041023, 0.4892016, 0.4390114, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdsnk"]
+size = Vector2(123, 85)
 
 [node name="in_house_1" type="Node2D" unique_id=634552007]
 script = ExtResource("1_kdsnk")
@@ -39,4 +44,14 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_kdsnk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_d8kl6")
 text = "EXIT"
 
+[node name="chest" type="Area2D" parent="." unique_id=1572201278]
+script = ExtResource("3_vwkql")
+loot_item = ExtResource("4_mo1nb")
+amount = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chest" unique_id=1608479720]
+position = Vector2(903.5, 448.5)
+shape = SubResource("RectangleShape2D_kdsnk")
+
 [connection signal="button_down" from="CanvasLayer/exit" to="." method="_on_exit_button_down"]
+[connection signal="body_entered" from="chest" to="chest" method="_on_body_entered"]

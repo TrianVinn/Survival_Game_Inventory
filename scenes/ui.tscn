@@ -26,50 +26,8 @@ offset_right = 1121.0
 offset_bottom = 622.0
 script = SubResource("GDScript_x4jx1")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel" unique_id=909716782]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/Panel/VBoxContainer" unique_id=69405408]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 1
-
-[node name="Label2" type="Label" parent="CanvasLayer/Panel/VBoxContainer" unique_id=496729065]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 1
-
-[node name="Label3" type="Label" parent="CanvasLayer/Panel/VBoxContainer" unique_id=1879788682]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 1
-
-[node name="Label4" type="Label" parent="CanvasLayer/Panel/VBoxContainer" unique_id=1872248744]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 1
-
-[node name="Label5" type="Label" parent="CanvasLayer/Panel/VBoxContainer" unique_id=244046392]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 1
-
-[node name="Label6" type="Label" parent="CanvasLayer/Panel/VBoxContainer" unique_id=399194499]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 1
-
-[node name="Label7" type="Label" parent="CanvasLayer/Panel/VBoxContainer" unique_id=324000883]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 1
-
-[node name="Label8" type="Label" parent="CanvasLayer/Panel/VBoxContainer" unique_id=1959746815]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 1
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Panel" unique_id=1281812118]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 4

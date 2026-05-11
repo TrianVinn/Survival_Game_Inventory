@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BuildingResource" format=3 uid="uid://c3etlakqt3gj7"]
+
+[ext_resource type="Script" uid="uid://oiesxcj7rqd" path="res://assets/structures/BuildingResource.gd" id="1_4cvqr"]
+[ext_resource type="Texture2D" uid="uid://dg0y6qvndld74" path="res://assets/structures/looted/ruin_yellow_looted.png" id="1_j13yo"]
+[ext_resource type="Texture2D" uid="uid://c5jd7a11y3gqx" path="res://assets/structures/ruin_yellow.png" id="2_ip3wm"]
+
+[resource]
+script = ExtResource("1_4cvqr")
+building_name = "house_1"
+normal_texture = ExtResource("2_ip3wm")
+looted_texture = ExtResource("1_j13yo")
+metadata/_custom_type_script = "uid://oiesxcj7rqd"

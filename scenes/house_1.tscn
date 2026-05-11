@@ -1,7 +1,39 @@
 [gd_scene format=3 uid="uid://d0l130rme2m01"]
 
 [ext_resource type="Texture2D" uid="uid://c5jd7a11y3gqx" path="res://assets/structures/ruin_yellow.png" id="1_rxjre"]
-[ext_resource type="Script" uid="uid://b07bi2rhp14c0" path="res://scripts/house_1.gd" id="1_w5d2h"]
+
+[sub_resource type="GDScript" id="GDScript_rxjre"]
+script/source = "extends Node2D
+
+var is_looted = false
+
+var house_id = \"house_1\"
+
+func _ready() -> void:
+	if Global.looted_houses.has(house_id):
+		$Sprite2D.modulate = Color(0.5, 0.5, 0.5)
+		$Area2D.monitoring = false
+		$enter.visible = false
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if Global.looted_houses.has(house_id):
+		return
+	else:
+		if body.is_in_group(\"player\"):
+			$enter.visible = true
+			Global.enter_position = body.global_position
+		
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.is_in_group(\"player\"):
+		$enter.visible = false
+		Global.looted_houses[house_id] = true
+		
+func _on_enter_button_down() -> void:
+	Global.remove_player_from_scene()
+	get_tree().change_scene_to_file(\"res://scenes/in_house_1.tscn\")
+	$enter.visible = false
+	
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxjre"]
 size = Vector2(128, 144)
@@ -16,7 +48,7 @@ bg_color = Color(0.8346167, 0.48272604, 0.51625973, 1)
 
 [node name="house_1" type="Node2D" unique_id=1840667032]
 z_index = -1
-script = ExtResource("1_w5d2h")
+script = SubResource("GDScript_rxjre")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1416626734]
 texture = ExtResource("1_rxjre")

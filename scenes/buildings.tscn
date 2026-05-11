@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bobym18utw1j"]
+
+[ext_resource type="Script" uid="uid://dr8332077nm8h" path="res://scripts/buildings.gd" id="1_yixnx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yixnx"]
+
+[node name="buildings" type="Node2D" unique_id=33903445]
+script = ExtResource("1_yixnx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=691560929]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=30753738]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1019612597]
+scale = Vector2(7, 7)
+shape = SubResource("RectangleShape2D_yixnx")
+
+[node name="enter" type="Button" parent="." unique_id=576443762]
+offset_left = 55.0
+offset_right = 113.0
+offset_bottom = 31.0
+text = "ENTER"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="enter" to="." method="_on_enter_pressed"]

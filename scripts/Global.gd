@@ -10,11 +10,15 @@ var item_db = {}
 
 var looted_houses = {}
 
+var looted_buildings = {}
+var current_building = ""
+
 func _ready() -> void:
 	player = PLAYER.instantiate()
 	loot_all_items()
 	
 func spawn_player(position):
+	player = PLAYER.instantiate()
 	player.position = position
 	player.target = position
 	get_tree().current_scene.add_child(player)
@@ -22,7 +26,12 @@ func spawn_player(position):
 func remove_player_from_scene():
 	if player and player.get_parent():
 		player.get_parent().remove_child(player)
-	
+
+func clear_player():
+	if player and is_instance_valid(player):
+		player.queue_free()
+		player = null
+
 func add_item(item:ItemResource,amount:int):
 	
 	if inventory_player.has(item.item_name):

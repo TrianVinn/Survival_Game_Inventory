@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://pnul08woq3w1"]
+
+[node name="slot_inventory" type="Panel" unique_id=1681528484]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1007994441]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="." unique_id=968811492]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

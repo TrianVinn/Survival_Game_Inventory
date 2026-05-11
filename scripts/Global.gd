@@ -22,9 +22,12 @@ func add_item(item:ItemResource,amount:int):
 		inventory_player[item.item_name] += amount
 	else:
 		inventory_player[item.item_name] = amount
+	inventory_updated.emit()
 func remove_item(item:ItemResource, amount:int):
 	if inventory_player.has(item.item_name):
 		inventory_player[item.item_name] -= amount
 		if inventory_player[item.item_name] <= 0:
 			inventory_player.erase(item.item_name)
-		
+	inventory_updated.emit()
+
+signal inventory_updated

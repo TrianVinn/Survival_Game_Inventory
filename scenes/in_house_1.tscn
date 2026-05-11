@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://bmv0dtn8gyxp1"]
 
 [ext_resource type="Texture2D" uid="uid://dvhvqs3m23fr3" path="res://assets/structures/in_house/floor_house.jpg" id="1_csqd8"]
-[ext_resource type="Script" uid="uid://bwv55s1bkw20g" path="res://scenes/in_house_1.gd" id="1_kdsnk"]
-[ext_resource type="Script" uid="uid://clfk6gl32g5b6" path="res://scenes/chest.gd" id="3_vwkql"]
+[ext_resource type="Script" uid="uid://bwv55s1bkw20g" path="res://scripts/in_house_1.gd" id="1_kdsnk"]
+[ext_resource type="Script" uid="uid://clfk6gl32g5b6" path="res://scripts/chest.gd" id="3_vwkql"]
 [ext_resource type="Resource" uid="uid://buj4a4qma4l6s" path="res://inventory/items/wood.tres" id="4_mo1nb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdsnk"]

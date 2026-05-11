@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bv7ib1yiig7xe"]
 
 [ext_resource type="Script" uid="uid://e8xhw2awluf" path="res://scripts/ui.gd" id="1_nt7q6"]
+[ext_resource type="PackedScene" uid="uid://pnul08woq3w1" path="res://scenes/slot_inventory.tscn" id="2_x4jx1"]
 
 [sub_resource type="GDScript" id="GDScript_x4jx1"]
 script/source = "extends Panel
@@ -31,3 +32,6 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 columns = 4
+
+[node name="slot_inventory" parent="CanvasLayer/Panel/GridContainer" unique_id=1681528484 instance=ExtResource("2_x4jx1")]
+layout_mode = 2

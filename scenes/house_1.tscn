@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b07bi2rhp14c0" path="res://scripts/house_1.gd" id="1_w5d2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxjre"]
-size = Vector2(260, 239)
+size = Vector2(128, 144)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rxjre"]
 
@@ -24,7 +24,7 @@ texture = ExtResource("1_rxjre")
 [node name="Area2D" type="Area2D" parent="." unique_id=750079490]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2009466287]
-position = Vector2(0, 0.5)
+position = Vector2(-35, 0)
 shape = SubResource("RectangleShape2D_rxjre")
 
 [node name="enter" type="Button" parent="." unique_id=1485477214]

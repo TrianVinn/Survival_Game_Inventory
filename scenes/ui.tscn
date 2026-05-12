@@ -21,10 +21,10 @@ script = ExtResource("1_nt7q6")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=745581054]
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=419558590]
-offset_left = 950.0
-offset_top = 406.0
-offset_right = 1121.0
-offset_bottom = 622.0
+offset_left = 1291.0
+offset_top = 760.0
+offset_right = 1462.0
+offset_bottom = 976.0
 script = SubResource("GDScript_x4jx1")
 
 [node name="GridContainer" type="GridContainer" parent="CanvasLayer/Panel" unique_id=1281812118]

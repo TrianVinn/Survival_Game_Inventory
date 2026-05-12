@@ -18,6 +18,16 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 Global="*uid://by188g3g0k37t"
 Ui="*uid://bv7ib1yiig7xe"
+MainUi="*uid://bqfpd7qc44mfh"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=2
+window/size/borderless=true
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [dotnet]
 

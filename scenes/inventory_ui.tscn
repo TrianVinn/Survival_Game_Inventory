@@ -25,12 +25,4 @@ offset_right = 1775.0
 offset_bottom = 605.0
 text = "CLOSE"
 
-[node name="Label" type="Label" parent="Panel" unique_id=1418651599]
-layout_mode = 0
-offset_left = 688.0
-offset_top = 483.0
-offset_right = 868.0
-offset_bottom = 506.0
-text = "fffffffffffffffffffffffffffffff"
-
 [connection signal="pressed" from="Panel/close_button" to="." method="_on_close_button_pressed"]

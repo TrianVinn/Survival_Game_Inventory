@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://baykjfdv4r30l"]
+
+[ext_resource type="Script" uid="uid://jilibqw7asn5" path="res://scripts/inventory_ui.gd" id="1_tahbm"]
+[ext_resource type="Texture2D" uid="uid://ccaua8ogbmtn" path="res://assets/ui/background_inventory.png" id="2_ylkvr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mdwe3"]
+texture = ExtResource("2_ylkvr")
+
+[node name="InventoryUI" type="CanvasLayer" unique_id=1531493419]
+script = ExtResource("1_tahbm")
+
+[node name="Panel" type="Panel" parent="." unique_id=307511441]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mdwe3")
+
+[node name="close_button" type="Button" parent="Panel" unique_id=1419539616]
+layout_mode = 0
+offset_left = 1386.0
+offset_top = 430.0
+offset_right = 1775.0
+offset_bottom = 605.0
+text = "CLOSE"
+
+[node name="Label" type="Label" parent="Panel" unique_id=1418651599]
+layout_mode = 0
+offset_left = 688.0
+offset_top = 483.0
+offset_right = 868.0
+offset_bottom = 506.0
+text = "fffffffffffffffffffffffffffffff"
+
+[connection signal="pressed" from="Panel/close_button" to="." method="_on_close_button_pressed"]

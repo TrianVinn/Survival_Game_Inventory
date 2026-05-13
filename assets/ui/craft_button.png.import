@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt0m3avt77qhc"
-path="res://.godot/imported/time,date_panel.png-0d3a56bbda2ab286490ab1dedcb655f6.ctex"
+uid="uid://bosn3u451t02b"
+path="res://.godot/imported/craft_button.png-c1ebfffd06728c66359b760de033cddd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/time,date_panel.png"
-dest_files=["res://.godot/imported/time,date_panel.png-0d3a56bbda2ab286490ab1dedcb655f6.ctex"]
+source_file="res://assets/ui/craft_button.png"
+dest_files=["res://.godot/imported/craft_button.png-c1ebfffd06728c66359b760de033cddd.ctex"]
 
 [params]
 

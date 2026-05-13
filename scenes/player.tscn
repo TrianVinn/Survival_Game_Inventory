@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bjplg4emd1afh"]
 
-[ext_resource type="Texture2D" uid="uid://ducsjwfpy21e1" path="res://assets/player/1.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://c8digo56vmklm" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://c3jlpid0621lf" path="res://assets/player/player_1.png" id="2_g2els"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3vyb7"]
 radius = 39.0
@@ -10,11 +10,11 @@ radius = 39.0
 z_index = 1
 script = ExtResource("1_g2els")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1893841462]
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("1_3vyb7")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1824878342]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2038163106]
 shape = SubResource("CircleShape2D_3vyb7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1893841462]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_g2els")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1824878342]

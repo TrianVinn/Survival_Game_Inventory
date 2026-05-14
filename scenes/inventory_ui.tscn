@@ -2,14 +2,20 @@
 
 [ext_resource type="Script" uid="uid://jilibqw7asn5" path="res://scripts/inventory_ui.gd" id="1_tahbm"]
 [ext_resource type="Texture2D" uid="uid://ccaua8ogbmtn" path="res://assets/ui/background_inventory.png" id="2_ylkvr"]
+[ext_resource type="Texture2D" uid="uid://cjuguqsb13atp" path="res://assets/ui/Без имени.png" id="3_mdwe3"]
+[ext_resource type="Texture2D" uid="uid://b75hklhfj22h5" path="res://assets/ui/close_button.png" id="5_2lmnb"]
+[ext_resource type="Texture2D" uid="uid://bwhoxh0rk6ly4" path="res://assets/ui/close_button_pressed.png" id="6_eicjl"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mdwe3"]
 texture = ExtResource("2_ylkvr")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iradw"]
+texture = ExtResource("3_mdwe3")
+
 [node name="InventoryUI" type="CanvasLayer" unique_id=1531493419]
 script = ExtResource("1_tahbm")
 
-[node name="Panel" type="Panel" parent="." unique_id=307511441]
+[node name="inventory_panel" type="Panel" parent="." unique_id=307511441]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -17,12 +23,49 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_mdwe3")
 
-[node name="close_button" type="Button" parent="Panel" unique_id=1419539616]
+[node name="items_panel" type="Panel" parent="inventory_panel" unique_id=1626194759]
 layout_mode = 0
-offset_left = 1386.0
-offset_top = 430.0
-offset_right = 1775.0
-offset_bottom = 605.0
-text = "CLOSE"
+offset_left = 60.0
+offset_top = 192.0
+offset_right = 1831.0
+offset_bottom = 912.0
 
-[connection signal="pressed" from="Panel/close_button" to="." method="_on_close_button_pressed"]
+[node name="bag_panel" type="Panel" parent="inventory_panel/items_panel" unique_id=619137944]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -357.0
+offset_right = 1199.0
+offset_bottom = 357.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_iradw")
+
+[node name="item_grid" type="GridContainer" parent="inventory_panel/items_panel/bag_panel" unique_id=971007716]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 168.0
+offset_right = 1163.0
+offset_bottom = 642.0
+theme_override_constants/h_separation = 17
+theme_override_constants/v_separation = 23
+columns = 10
+
+[node name="close_button" type="TextureButton" parent="inventory_panel/items_panel/bag_panel" unique_id=293870514]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -336.0
+offset_right = -34.0
+offset_bottom = -317.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("5_2lmnb")
+texture_pressed = ExtResource("6_eicjl")
+texture_hover = ExtResource("6_eicjl")
+
+[connection signal="pressed" from="inventory_panel/items_panel/bag_panel/close_button" to="." method="_on_close_button_pressed"]

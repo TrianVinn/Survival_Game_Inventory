@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dkmu8p7ddq5py"]
+
+[ext_resource type="Texture2D" uid="uid://b4712fvae4ngn" path="res://assets/ui/inventory_slot.png" id="1_bxqf6"]
+[ext_resource type="Texture2D" uid="uid://b25w51wdogpwm" path="res://assets/ui/inventory_slot_pressed.png" id="2_hddt5"]
+[ext_resource type="Script" uid="uid://m3miuwp3hlv5" path="res://scripts/inventory_slot.gd" id="3_hddt5"]
+
+[node name="InventorySlot" type="TextureButton" unique_id=138208582]
+custom_minimum_size = Vector2(93, 93)
+offset_right = 98.0
+offset_bottom = 98.0
+texture_normal = ExtResource("1_bxqf6")
+texture_pressed = ExtResource("2_hddt5")
+texture_hover = ExtResource("2_hddt5")
+script = ExtResource("3_hddt5")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=786355837]
+custom_minimum_size = Vector2(93, 93)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer" unique_id=319529070]
+custom_minimum_size = Vector2(93, 93)
+layout_mode = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1779748452]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -46.0
+offset_top = -29.0
+grow_horizontal = 0
+grow_vertical = 0

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bwv55s1bkw20g" path="res://scripts/in_house_1.gd" id="1_kdsnk"]
 [ext_resource type="Script" uid="uid://clfk6gl32g5b6" path="res://scripts/chest.gd" id="3_vwkql"]
 [ext_resource type="Resource" uid="uid://buj4a4qma4l6s" path="res://inventory/items/wood.tres" id="4_mo1nb"]
+[ext_resource type="Resource" uid="uid://x06wjsgmo7pr" path="res://inventory/items/paper.tres" id="5_mo1nb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdsnk"]
 texture = ExtResource("1_csqd8")
@@ -35,10 +36,10 @@ position = Vector2(718, 620)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=330938613]
 
 [node name="exit" type="Button" parent="CanvasLayer" unique_id=1971583321]
-offset_left = 1014.0
-offset_top = 106.0
-offset_right = 1116.0
-offset_bottom = 178.0
+offset_left = 1095.0
+offset_top = 260.0
+offset_right = 1197.0
+offset_bottom = 332.0
 theme_override_font_sizes/font_size = 46
 theme_override_styles/normal = SubResource("StyleBoxFlat_kdsnk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_d8kl6")
@@ -48,6 +49,8 @@ text = "EXIT"
 script = ExtResource("3_vwkql")
 loot_item = ExtResource("4_mo1nb")
 amount = 5
+loot_item2 = ExtResource("5_mo1nb")
+amount2 = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chest" unique_id=1608479720]
 position = Vector2(903.5, 448.5)

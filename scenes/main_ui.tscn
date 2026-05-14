@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cv50kckdw88o5" path="res://assets/ui/tasks_button.png" id="8_82kx8"]
 [ext_resource type="Texture2D" uid="uid://c047dktd2qed6" path="res://assets/ui/craft_button_pressed.png" id="8_r8eje"]
 [ext_resource type="Texture2D" uid="uid://d0rl3352ifyt5" path="res://assets/ui/tasks_button_pressed.png" id="9_jnl7h"]
+[ext_resource type="PackedScene" uid="uid://baykjfdv4r30l" path="res://scenes/inventory_ui.tscn" id="12_82kx8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_513t2"]
 texture = ExtResource("1_fnul3")
@@ -77,5 +78,7 @@ offset_bottom = 100.0
 texture_normal = ExtResource("8_82kx8")
 texture_pressed = ExtResource("9_jnl7h")
 texture_hover = ExtResource("9_jnl7h")
+
+[node name="InventoryUI" parent="." unique_id=1531493419 instance=ExtResource("12_82kx8")]
 
 [connection signal="pressed" from="down_buttons/inventory_button" to="." method="_on_inventory_button_pressed"]

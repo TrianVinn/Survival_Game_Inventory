@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://ce1rf443oaxq7" path="res://scenes/main_ui.gd" id="1_r0apq"]
 [ext_resource type="Texture2D" uid="uid://dfiqnah27773p" path="res://assets/ui/panel_for_buttons.png" id="2_513t2"]
 [ext_resource type="Texture2D" uid="uid://cuey1nyo0eubo" path="res://assets/ui/player_button.png" id="3_j6a7c"]
+[ext_resource type="FontFile" uid="uid://bdgb4gdj2awi8" path="res://fonts/Bebas Neue Cyrillic.ttf" id="3_jnl7h"]
 [ext_resource type="Texture2D" uid="uid://d2cv2tkttg0y6" path="res://assets/ui/player_button_pressed.png" id="4_scoti"]
 [ext_resource type="Texture2D" uid="uid://b1ql5ew5qwdmg" path="res://assets/ui/inventory_button.png" id="5_kyx1g"]
 [ext_resource type="Texture2D" uid="uid://c41fps0m8g07j" path="res://assets/ui/inventory_button_pressed.png" id="6_r8eje"]
@@ -15,6 +16,21 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_513t2"]
 texture = ExtResource("1_fnul3")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hst8y"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jnl7h"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u04fh"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ulqfl"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rx44x"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e6fyy"]
 texture = ExtResource("2_513t2")
@@ -28,6 +44,248 @@ z_index = 2
 offset_right = 1715.0
 offset_bottom = 182.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_513t2")
+
+[node name="health" type="Panel" parent="stats" unique_id=364776763]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 34.0
+offset_right = 326.0
+offset_bottom = 55.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hst8y")
+
+[node name="health_name" type="Label" parent="stats/health" unique_id=1745120105]
+layout_mode = 1
+offset_right = 80.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.15686275, 0.14117648, 0.11764706, 1)
+theme_override_colors/font_outline_color = Color(0.2627451, 0.23921569, 0.20392157, 1)
+theme_override_constants/paragraph_spacing = 0
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_jnl7h")
+theme_override_font_sizes/font_size = 23
+text = "ЗДОРОВЬЕ"
+
+[node name="data" type="Label" parent="stats/health" unique_id=2125371715]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -11.0
+offset_bottom = 15.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.11764706, 0.101960786, 0.09019608, 1)
+theme_override_fonts/font = ExtResource("3_jnl7h")
+theme_override_font_sizes/font_size = 25
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="energy" type="Panel" parent="stats" unique_id=262327403]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 70.0
+offset_right = 326.0
+offset_bottom = 91.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hst8y")
+
+[node name="energy_name" type="Label" parent="stats/energy" unique_id=1125579298]
+layout_mode = 1
+offset_right = 63.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.15686275, 0.14117648, 0.11764706, 1)
+theme_override_colors/font_outline_color = Color(0.2627451, 0.23921569, 0.20392157, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_jnl7h")
+theme_override_font_sizes/font_size = 23
+text = "ЭНЕРГИЯ"
+
+[node name="data" type="Label" parent="stats/energy" unique_id=1241566107]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.11764706, 0.101960786, 0.09019608, 1)
+theme_override_fonts/font = ExtResource("3_jnl7h")
+theme_override_font_sizes/font_size = 25
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hungry" type="Panel" parent="stats" unique_id=445733476]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 34.0
+offset_right = 487.0
+offset_bottom = 55.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hst8y")
+
+[node name="hungry_name" type="Label" parent="stats/hungry" unique_id=440635084]
+layout_mode = 1
+offset_right = 49.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.15686275, 0.14117648, 0.11764706, 1)
+theme_override_colors/font_outline_color = Color(0.2627451, 0.23921569, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("3_jnl7h")
+theme_override_font_sizes/font_size = 23
+text = "ГОЛОД"
+
+[node name="data" type="Label" parent="stats/hungry" unique_id=1801927427]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.11764706, 0.101960786, 0.09019608, 1)
+theme_override_fonts/font = ExtResource("3_jnl7h")
+theme_override_font_sizes/font_size = 25
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="water" type="Panel" parent="stats" unique_id=1059422534]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 70.0
+offset_right = 487.0
+offset_bottom = 91.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hst8y")
+
+[node name="water_name" type="Label" parent="stats/water" unique_id=983540833]
+layout_mode = 1
+offset_right = 60.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.15686275, 0.14117648, 0.11764706, 1)
+theme_override_colors/font_outline_color = Color(0.2627451, 0.23921569, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("3_jnl7h")
+theme_override_font_sizes/font_size = 23
+text = "ЖАЖДА"
+
+[node name="data" type="Label" parent="stats/water" unique_id=1223232027]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.11764706, 0.101960786, 0.09019608, 1)
+theme_override_fonts/font = ExtResource("3_jnl7h")
+theme_override_font_sizes/font_size = 25
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="weather" type="Panel" parent="stats" unique_id=1676699422]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 17.0
+offset_right = 683.0
+offset_bottom = 108.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jnl7h")
+
+[node name="temperature" type="Label" parent="stats/weather" unique_id=48863559]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_right = -32.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.16078432, 0.14901961, 0.1254902, 1)
+theme_override_fonts/font = ExtResource("3_jnl7h")
+theme_override_font_sizes/font_size = 32
+text = "23 °C"
+horizontal_alignment = 2
+
+[node name="location" type="Panel" parent="stats" unique_id=1012739137]
+layout_mode = 0
+offset_left = 685.0
+offset_top = 17.0
+offset_right = 971.0
+offset_bottom = 108.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u04fh")
+
+[node name="Label" type="Label" parent="stats/location" unique_id=1030638236]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -25.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.16078432, 0.14901961, 0.1254902, 1)
+theme_override_fonts/font = ExtResource("3_jnl7h")
+theme_override_font_sizes/font_size = 32
+text = "НАЗВАНИЕ ЛОКАЦИИ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="date" type="Panel" parent="stats" unique_id=371313358]
+layout_mode = 0
+offset_left = 973.0
+offset_top = 17.0
+offset_right = 1154.0
+offset_bottom = 108.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ulqfl")
+
+[node name="Label" type="Label" parent="stats/date" unique_id=419808935]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 56.0
+offset_top = -8.5
+offset_right = -20.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.16078432, 0.14901961, 0.1254902, 1)
+theme_override_fonts/font = ExtResource("3_jnl7h")
+theme_override_font_sizes/font_size = 24
+text = "15.05.2026"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="time" type="Panel" parent="stats" unique_id=674053914]
+layout_mode = 0
+offset_left = 1157.0
+offset_top = 17.0
+offset_right = 1340.0
+offset_bottom = 108.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rx44x")
+
+[node name="Label" type="Label" parent="stats/time" unique_id=1048384703]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_right = -15.0
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.16078432, 0.14901961, 0.1254902, 1)
+theme_override_fonts/font = ExtResource("3_jnl7h")
+theme_override_font_sizes/font_size = 29
+text = "14:13"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="down_buttons" type="Panel" parent="." unique_id=868580841]
 z_index = 2
@@ -49,6 +307,24 @@ texture_normal = ExtResource("3_j6a7c")
 texture_pressed = ExtResource("4_scoti")
 texture_hover = ExtResource("4_scoti")
 
+[node name="player_name" type="Label" parent="down_buttons/player_button" unique_id=208105198]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.45882353, 0.40392157, 0.34117648, 1)
+theme_override_colors/font_outline_color = Color(0.06666667, 0.06666667, 0.050980393, 1)
+theme_override_constants/line_spacing = 3
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_jnl7h")
+theme_override_font_sizes/font_size = 27
+text = "ПЕРСОНАЖ"
+horizontal_alignment = 1
+
 [node name="inventory_button" type="TextureButton" parent="down_buttons" unique_id=559054960]
 layout_mode = 0
 offset_left = 190.0
@@ -58,6 +334,24 @@ offset_bottom = 100.0
 texture_normal = ExtResource("5_kyx1g")
 texture_pressed = ExtResource("6_r8eje")
 texture_hover = ExtResource("6_r8eje")
+
+[node name="inventory_name" type="Label" parent="down_buttons/inventory_button" unique_id=563560065]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.45882353, 0.40392157, 0.34117648, 1)
+theme_override_colors/font_outline_color = Color(0.06666667, 0.06666667, 0.050980393, 1)
+theme_override_constants/line_spacing = 3
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_jnl7h")
+theme_override_font_sizes/font_size = 27
+text = "ИНВЕНТАРЬ"
+horizontal_alignment = 1
 
 [node name="craft_button" type="TextureButton" parent="down_buttons" unique_id=1818523627]
 layout_mode = 0
@@ -69,6 +363,24 @@ texture_normal = ExtResource("7_r0apq")
 texture_pressed = ExtResource("8_r8eje")
 texture_hover = ExtResource("8_r8eje")
 
+[node name="craft_name" type="Label" parent="down_buttons/craft_button" unique_id=478527140]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.45882353, 0.40392157, 0.34117648, 1)
+theme_override_colors/font_outline_color = Color(0.06666667, 0.06666667, 0.050980393, 1)
+theme_override_constants/line_spacing = 3
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_jnl7h")
+theme_override_font_sizes/font_size = 27
+text = "КРАФТ"
+horizontal_alignment = 1
+
 [node name="mission_button" type="TextureButton" parent="down_buttons" unique_id=2057117443]
 layout_mode = 0
 offset_left = 544.0
@@ -79,6 +391,25 @@ texture_normal = ExtResource("8_82kx8")
 texture_pressed = ExtResource("9_jnl7h")
 texture_hover = ExtResource("9_jnl7h")
 
+[node name="mission_name" type="Label" parent="down_buttons/mission_button" unique_id=1378825848]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.45882353, 0.40392157, 0.34117648, 1)
+theme_override_colors/font_outline_color = Color(0.06666667, 0.06666667, 0.050980393, 1)
+theme_override_constants/line_spacing = 3
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_jnl7h")
+theme_override_font_sizes/font_size = 27
+text = "ЗАДАНИЯ"
+horizontal_alignment = 1
+
 [node name="InventoryUI" parent="." unique_id=1531493419 instance=ExtResource("12_82kx8")]
+visible = false
 
 [connection signal="pressed" from="down_buttons/inventory_button" to="." method="_on_inventory_button_pressed"]

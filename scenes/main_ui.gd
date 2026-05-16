@@ -5,7 +5,7 @@ var inventory_instance = null
 @onready var inventory_overlay = $InventoryUI
 
 func _on_inventory_button_pressed():
-	inventory_overlay.visible = true
+	inventory_overlay.visible = not inventory_overlay.visible
 
 func _close_inventory():
 	inventory_overlay.visible = false

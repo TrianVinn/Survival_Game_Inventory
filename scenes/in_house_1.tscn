@@ -48,7 +48,7 @@ text = "EXIT"
 [node name="chest" type="Area2D" parent="." unique_id=1572201278]
 script = ExtResource("3_vwkql")
 loot_item = ExtResource("4_mo1nb")
-amount = 5
+amount = 200
 loot_item2 = ExtResource("5_mo1nb")
 amount2 = 3
 
